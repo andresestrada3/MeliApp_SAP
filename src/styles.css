@@ -71,6 +71,17 @@ header {
     }
 }
 
+.subscribe-btn {
+    background-color: #2be1e5; 
+    background-image: linear-gradient(to bottom right, #2be1e5, #0f9ca9);
+    color: #ffffff;
+    &:hover {
+        background-color: #0fc5cb; 
+        background-image: linear-gradient(to bottom right, #0fc5cb, #137e8b);
+        color: #ffffff;
+    }
+}
+
 a {
     color: black;
     text-decoration: none;

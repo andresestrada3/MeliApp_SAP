@@ -10,6 +10,10 @@ export function MeliInputComponent({handleProfilePopup, isLogged, userProfile, l
         gigya.accounts.showScreenSet({ screenSet: 'Default-RegistrationLogin' });
     }, []);   
 
+    const handleSubscribe = useCallback(() => {
+        gigya.accounts.showScreenSet({ screenSet: 'prueba-LiteRegistration' });
+    }, []); 
+
     return (
         <header className={`p-2 ${isMobile ? 'header_mobile' : ''}`}>
 
@@ -42,12 +46,21 @@ export function MeliInputComponent({handleProfilePopup, isLogged, userProfile, l
                             )}
                         </div>
                     ) : (
-                        <button
-                            className='btn login-btn ms-2'
-                            onClick={handleLogin}
-                        >
-                            Log In
-                        </button>
+                        <>
+                            <button
+                                className='btn login-btn ms-2'
+                                onClick={handleLogin}
+                            >
+                                Log In
+                            </button>
+
+                            <button
+                                className='btn subscribe-btn ms-2'
+                                onClick={handleSubscribe}
+                            >
+                                Subscribe
+                            </button>
+                        </>
                     )}
                 </>
             )}
