@@ -1,0 +1,172 @@
+.product_container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+header {
+    height: 64px;
+    background-color: #edfefd;
+    display: flex;
+}
+
+.header_mobile {
+    position:fixed;
+    width: 100%;
+    z-index: 888;
+}
+
+.header_mobile + .container {
+    padding-top: 50px;
+}
+
+.gigya-screen-dialog-top {
+    background-color: #1595a5 !important;
+    
+}
+
+.search {
+    color: #137e8b;
+    border-color: #137e8b;
+
+    &:hover {
+        background-color: #d1fcfb;
+        border-color: #137e8b;
+    }
+}
+
+.update-btn,
+.go_back-btn {
+    background-color: #cbfcf9;
+    border-color: #97f8f3;
+    color: #0d7178;
+
+    &:hover {
+        background-color: #5bedeb;
+        border-color: #97f8f3;
+    }
+
+}
+
+.login-btn,
+.buy-btn {
+    background-color: #0FC5CB;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #0f9ca9;
+        color: #ffffff;
+    }
+}
+
+.logout-btn,
+.home-btn {
+    background-color: #2be1e5; 
+    background-image: linear-gradient(to bottom right, #2be1e5, #0f9ca9);
+    color: #ffffff;
+    &:hover {
+        background-color: #0fc5cb; 
+        background-image: linear-gradient(to bottom right, #0fc5cb, #137e8b);
+        color: #ffffff;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header form {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+header input {
+    margin: auto 0;
+    max-width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    header form {
+        justify-content: initial;
+    }
+
+    header input {
+        max-width: 80%;
+    }
+
+    .logout-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Product Detail */
+
+.section-container {
+    width: 50%;
+    margin: auto;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-link {
+    color: #2ad3d7;
+
+    &:hover {
+        color: #0a9097;
+    }
+}
+
+.product-image {
+    height: 410px;
+    width: 410px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 64px;
+    
+    
+}
+
+.profile-popup {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-open {
+    opacity: 0.3;
+}
