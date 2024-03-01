@@ -20,7 +20,7 @@ export function MeliInputComponent({handleProfilePopup, isLogged, userProfile, l
             ) : (
                 <>
                     {isLogged && userProfile ? (
-                        <div className='d-flex' style={{ alignItems: 'center' }}>
+                        <div className='d-flex ps-2' style={{ alignItems: 'center' }}>
                             
                             <span 
                                 className='logged_name me-3' 
