@@ -10,6 +10,7 @@ export const useAuth = () => {
             callback: function (res) {
                 if (res.errorCode === 0) {
                     setIsLogged(true);
+                    res.profile.firstName = decodeURIComponent(encodeURIComponent(res.profile.firstName));
                     setUserProfile(res.profile);
                     setLoading(false);
                 } else {
@@ -22,6 +23,7 @@ export const useAuth = () => {
     
     const login = (response) => {
         setIsLogged(true);
+        response.profile.firstName = decodeURIComponent(encodeURIComponent(response.profile.firstName));
         setUserProfile(response.profile);
     };
 
